@@ -1,5 +1,3 @@
-[![CodeFactor](https://www.codefactor.io/repository/github/moleszek/docker-ansible/badge)](https://www.codefactor.io/repository/github/moleszek/docker-ansible)
-
 ### About:
 * OS: moleszek/flake:1.0
 
@@ -18,10 +16,10 @@ This docker container contains **ansible.cfg**.<br/>
 * docker build . -t {tagname}
 
 #### Download from Docker repository:
-* docker pull moleszek/ansible:1.0
+* docker pull moleszek/ansible:1.1
 
 ### To run ansible script using ansible Docker image directly:
-* docker run -it --rm -v {localFolderPath}:/home moleszek/ansible:1.0 -i inventory.yml {playbook}.yml
+* docker run -it --rm -v {localFolderPath}:/home moleszek/ansible:1.1 -i inventory.yml {playbook}.yml
 
 ### To run ansible script form docker compose:
 * docker-compose run --rm ansible -i inventory.yml {playbook}.yml
