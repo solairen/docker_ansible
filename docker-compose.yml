@@ -1,9 +1,0 @@
-version: '3.0'
-
-services:
-  ansible:
-    image: moleszek/ansible:1.1
-    container_name: "ansible"
-    volumes:
-      - pathToAnsibleScripts:/ansible
-    tty: true
