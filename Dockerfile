@@ -1,5 +1,5 @@
 FROM docker.pkg.github.com/solairen/flake/flake:1.0
-#
+
 LABEL maintainer="michal.oleszek@oultook.com"
 
 RUN mkdir /ansible
