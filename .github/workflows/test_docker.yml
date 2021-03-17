@@ -23,6 +23,6 @@ jobs:
         repository: moleszek/ansible
         tag_latest: true
         push: false
-        github: true
+        github: false
         token: ${{ secrets.token }}
         owner: ${{ github.repository_owner }}
