@@ -1,4 +1,4 @@
-FROM docker.pkg.github.com/solairen/flake/flake:1.0
+FROM moleszek/flake:1.1
 
 LABEL maintainer="michal.oleszek@oultook.com"
 
