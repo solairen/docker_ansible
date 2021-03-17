@@ -18,10 +18,10 @@ jobs:
     - name: test docker imgage
       uses: ./.github/actions/docker_tag
       with:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        username: ${{ secrets.docker_username }}
+        password: ${{ secrets.docker_token }}
         repository: moleszek/ansible
-        tag_latest: false
+        tag_latest: true
         push: false
         github: true
         token: ${{ secrets.token }}
@@ -41,18 +41,18 @@ jobs:
       - name: push docker image to Docker Hub
         uses: ./.github/actions/docker_tag
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          username: ${{ secrets.docker_username }}
+          password: ${{ secrets.docker_token }}
           repository: moleszek/ansible
-          tag_latest: false
+          tag_latest: true
           push: true
           github: true
           token: ${{ secrets.token }}
           owner: ${{ github.repository_owner }}
-      - name: Update docker readme
-        uses: peter-evans/dockerhub-description@v2
-        env:
-          DOCKERHUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          DOCKERHUB_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-          DOCKERHUB_REPOSITORY: moleszek/ansible
-          README_FILEPATH: ./README.md
+      #- name: Update docker readme
+      #  uses: peter-evans/dockerhub-description@v2
+      #  env:
+      #    DOCKERHUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      #    DOCKERHUB_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      #    DOCKERHUB_REPOSITORY: moleszek/ansible
+      #    README_FILEPATH: ./README.md

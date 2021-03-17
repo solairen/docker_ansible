@@ -18,10 +18,10 @@ jobs:
     - name: test docker imgage
       uses: ./.github/actions/docker_tag
       with:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        username: ${{ secrets.docker_username }}
+        password: ${{ secrets.docker_token }}
         repository: moleszek/ansible
-        tag_latest: false
+        tag_latest: true
         push: false
         github: true
         token: ${{ secrets.token }}
