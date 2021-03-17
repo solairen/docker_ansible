@@ -21,8 +21,8 @@ jobs:
         username: ${{ secrets.docker_username }}
         password: ${{ secrets.docker_token }}
         repository: moleszek/ansible
-        tag_latest: false
+        tag_latest: true
         push: false
-        github: true
+        github: false
         token: ${{ secrets.token }}
         owner: ${{ github.repository_owner }}

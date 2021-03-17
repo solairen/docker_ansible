@@ -16,7 +16,7 @@ This docker container contains **ansible.cfg**.<br/>
 * docker build . -t {tagname}
 
 #### Download from Docker repository:
-* docker pull moleszek/ansible:1.0
+* docker pull moleszek/ansible:latest
 
 ### To run ansible script using ansible Docker image directly:
-* docker run -it --rm -v {localFolderPath}:/home moleszek/ansible:1.0 -i inventory.yml {playbook}.yml
+* docker run -it --rm -v {localFolderPath}:/home moleszek/ansible:latest -i inventory.yml {playbook}.yml
