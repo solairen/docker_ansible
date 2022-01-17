@@ -3,13 +3,16 @@ on:
   push:
     branches-ignore:
       - "main"
-      - "master"
   pull_request:
     branches-ignore:
       - "main"
-      - "master"
+
+env:
+  GH_TOKEN: ${{ secrets.token }}
+
 jobs:
   test_docker_image:
+    name: Test-build Docker image
     runs-on: ubuntu-latest
     container: docker:stable
     steps:
@@ -18,6 +21,6 @@ jobs:
       with:
         repository: ${{ github.repository }}
         ref: ${{ github.ref }}
-        token: ${{ secrets.token }}
+        token: ${{ env.GH_TOKEN }}
     - name: Build dockerfile
       run: docker build -t ansible -f Dockerfile .

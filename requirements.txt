@@ -1,0 +1,4 @@
+ansible==5.2.0
+pywinrm==0.4.2
+jmespath==0.10.0
+PyVmomi==7.0.3
