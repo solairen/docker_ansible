@@ -1,5 +1,5 @@
 ### About:
-* OS: private image based on alpine linux
+* OS: Python 3.10
 
 This docker container contains:
 * [Ansible](https://docs.ansible.com/ansible/latest/index.html)
@@ -9,7 +9,7 @@ This docker container contains:
 
 ### Additional information
 This docker container contains **ansible.cfg**.<br/>
-**ansible.cfg** is copied to **/etc/ansible**
+**ansible.cfg** is placed in **/etc/ansible**
 
 ### How to build or download:
 #### To build docker images from Dockerfile:
