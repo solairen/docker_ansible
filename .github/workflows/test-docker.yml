@@ -9,9 +9,10 @@ on:
 
 env:
   GH_TOKEN: ${{ secrets.token }}
+  DISCORD: ${{ secrets.DISCORD_WEBHOOK }}
 
 jobs:
-  test_docker_image:
+  test:
     name: Test-build Docker image
     runs-on: ubuntu-latest
     container: docker:stable
@@ -24,3 +25,25 @@ jobs:
         token: ${{ env.GH_TOKEN }}
     - name: Build dockerfile
       run: docker build -t ansible -f Dockerfile .
+  notify_on_success:
+    name: Send notification
+    needs:
+      - test
+    if: ${{ success() }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: sarisia/actions-status-discord@v1
+        with:
+          webhook: ${{ env.DISCORD }}
+          description: "Successfuly test docker image!"
+  notify_on_failure:
+    name: Send notification
+    needs:
+      - test
+    if: ${{ failure() }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: sarisia/actions-status-discord@v1
+        with:
+          webhook: ${{ env.DISCORD }}
+          description: "Failed to test docker image!"
