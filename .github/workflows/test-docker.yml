@@ -26,24 +26,26 @@ jobs:
     - name: Build dockerfile
       run: docker build -t ansible -f Dockerfile .
   notify_on_success:
-    name: Send notification
+    name: Send notification on success
     needs:
       - test
     if: ${{ success() }}
     runs-on: ubuntu-latest
     steps:
-      - uses: sarisia/actions-status-discord@v1
+      - name: Send notification
+        uses: sarisia/actions-status-discord@v1
         with:
           webhook: ${{ env.DISCORD }}
-          description: "Successfuly test docker image!"
+          description: "Successfully test docker image!"
   notify_on_failure:
-    name: Send notification
+    name: Send notification on failure
     needs:
       - test
     if: ${{ failure() }}
     runs-on: ubuntu-latest
     steps:
-      - uses: sarisia/actions-status-discord@v1
+      - name: Send notification
+        uses: sarisia/actions-status-discord@v1
         with:
           webhook: ${{ env.DISCORD }}
           description: "Failed to test docker image!"
