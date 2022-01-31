@@ -48,4 +48,5 @@ jobs:
         uses: sarisia/actions-status-discord@v1
         with:
           webhook: ${{ env.DISCORD }}
+          status: failure
           description: "Failed to test docker image!"

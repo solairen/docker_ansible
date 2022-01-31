@@ -39,7 +39,7 @@ jobs:
       - uses: sarisia/actions-status-discord@v1
         with:
           webhook: ${{ env.DISCORD }}
-          description: "Successfully built and pushed docker image do DockerHub!"
+          description: "Successfully built and push docker image do DockerHub!"
   notify_on_failure:
     name: Send notification on failure
     needs:
@@ -50,4 +50,5 @@ jobs:
       - uses: sarisia/actions-status-discord@v1
         with:
           webhook: ${{ env.DISCORD }}
-          description: "Failed to build and pushed docker image do DockerHub!"
+          status: failure
+          description: "Failed to build and push docker image do DockerHub!"
