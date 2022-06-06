@@ -15,4 +15,4 @@ RUN rm requirements.txt
 RUN mkdir -p /etc/ansible
 COPY ansible.cfg /etc/ansible
 
-ENTRYPOINT [ "ansible-playbook" ]
+ENTRYPOINT [ "bash" ]
