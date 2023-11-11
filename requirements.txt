@@ -1,4 +1,4 @@
-ansible==8.6.0
+ansible==8.6.1
 pywinrm==0.4.3
 jmespath==1.0.1
 PyVmomi==8.0.2.0
