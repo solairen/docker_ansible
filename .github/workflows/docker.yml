@@ -9,7 +9,6 @@ on:
 env:
   DOCKER_USER: ${{ secrets.docker_username }}
   DOCKER_PASS: ${{ secrets.docker_token }}
-  DISCORD: ${{ secrets.DISCORD_WEBHOOK }}
   VERSION: ${{ github.event.inputs.version }}
 
 jobs:
@@ -34,26 +33,3 @@ jobs:
           file: Dockerfile
           push: true
           tags: moleszek/ansible:${{ env.VERSION }}
-  notify_on_success:
-    name: Send notification on success
-    needs:
-      - push_docker_image_to_dockerhub
-    if: ${{ success() }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: sarisia/actions-status-discord@v1
-        with:
-          webhook: ${{ env.DISCORD }}
-          description: "Successfully built and push docker image to DockerHub!"
-  notify_on_failure:
-    name: Send notification on failure
-    needs:
-      - push_docker_image_to_dockerhub
-    if: ${{ failure() }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: sarisia/actions-status-discord@v1
-        with:
-          webhook: ${{ env.DISCORD }}
-          status: failure
-          description: "Failed to build and push docker image to DockerHub!"
