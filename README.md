@@ -1,11 +1,9 @@
 ### About:
-* OS: Python 3.10
+* OS: Python 3.12.1
 
 This docker container contains:
 * [Ansible](https://docs.ansible.com/ansible/latest/index.html)
-* [pywinrm plugin](https://pypi.org/project/pywinrm/0.2.2/)
 * [jmespath plugin](https://pypi.org/project/jmespath/)
-* [PyVmomi plugin](https://pypi.org/project/pyvmomi/)
 
 ### Additional information
 This docker container contains **ansible.cfg**.<br/>
