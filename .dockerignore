@@ -1,3 +1,5 @@
 **/.github
 **/Dockerfile
 **/.git
+**/.vscode
+**/requirements.txt

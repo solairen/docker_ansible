@@ -1,0 +1,5 @@
+{
+  "editor.tabSize": 2,
+  "ansible.python.interpreterPath": "/usr/local/bin/python",
+  "iis.configDir": ""
+}
