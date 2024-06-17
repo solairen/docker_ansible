@@ -35,7 +35,7 @@ jobs:
           password: ${{ secrets.token }}
 
       - name: Build and push with tag latest
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           file: Dockerfile
           platforms: linux/amd64,linux/arm64
@@ -43,7 +43,7 @@ jobs:
           tags: moleszek/ansible:latest
 
       - name: Build and push with tag ${{ env.VERSION }}
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           file: Dockerfile
           platforms: linux/amd64,linux/arm64
@@ -51,7 +51,7 @@ jobs:
           tags: moleszek/ansible:${{ env.VERSION }}
 
       - name: Build and push to GitHub Container with tag latest
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           file: Dockerfile
           platforms: linux/amd64,linux/arm64
@@ -61,7 +61,7 @@ jobs:
               GIT_AUTH_TOKEN=${{ secrets.token }}
 
       - name: Build and push to GitHub Container with tag ${{ env.VERSION }}
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           file: Dockerfile
           platforms: linux/amd64,linux/arm64
