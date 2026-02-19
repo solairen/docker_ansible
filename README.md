@@ -2,7 +2,7 @@
 
 ## About
 
-* OS: Python 3.12.1
+* OS: Python 3.14-slim
 
 This docker container contains:
 
