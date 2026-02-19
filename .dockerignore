@@ -2,4 +2,5 @@
 **/Dockerfile
 **/.git
 **/.vscode
-**/requirements.txt
+**/venv
+**/.pre-commit-config.yaml

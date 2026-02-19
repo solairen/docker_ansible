@@ -10,8 +10,11 @@ on:
 jobs:
   test:
     name: Test-build Docker image
-    runs-on: ubuntu-latest
-    container: docker:stable
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        platform: [linux/amd64, linux/arm64]
+
     steps:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -24,4 +27,5 @@ jobs:
         with:
           file: Dockerfile
           push: false
-          tags: moleszek/ansible:latest
+          tags: moleszek/ansible:test
+          platforms: ${{ matrix.platform }}
