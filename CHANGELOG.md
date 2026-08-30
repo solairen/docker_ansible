@@ -28,3 +28,12 @@
 
 
 **Full Changelog**: https://github.com/solairen/docker_ansible/compare/11.3.0...1.1.0
+
+## 1.1.2
+
+## What's Changed
+* Bump ansible from 14.3.0 to 14.3.1 by @dependabot[bot] in https://github.com/solairen/docker_ansible/pull/108
+* Bump solairen/ruleset-trigger from 1.0.5 to 1.0.6 by @dependabot[bot] in https://github.com/solairen/docker_ansible/pull/109
+
+
+**Full Changelog**: https://github.com/solairen/docker_ansible/compare/1.1.1...1.1.2
