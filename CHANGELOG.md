@@ -37,3 +37,11 @@
 
 
 **Full Changelog**: https://github.com/solairen/docker_ansible/compare/1.1.1...1.1.2
+
+## 1.1.3
+
+## What's Changed
+* Bump softprops/action-gh-release from 3.0.2 to 3.0.3 by @dependabot[bot] in https://github.com/solairen/docker_ansible/pull/110
+
+
+**Full Changelog**: https://github.com/solairen/docker_ansible/compare/1.1.2...1.1.3
