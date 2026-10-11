@@ -53,3 +53,11 @@
 
 
 **Full Changelog**: https://github.com/solairen/docker_ansible/compare/1.1.3...1.1.4
+
+## 1.1.5
+
+## What's Changed
+* Bump ansible from 14.4.0 to 14.5.0 by @dependabot[bot] in https://github.com/solairen/docker_ansible/pull/112
+
+
+**Full Changelog**: https://github.com/solairen/docker_ansible/compare/1.1.4...1.1.5
