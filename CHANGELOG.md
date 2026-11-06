@@ -61,3 +61,12 @@
 
 
 **Full Changelog**: https://github.com/solairen/docker_ansible/compare/1.1.4...1.1.5
+
+## 1.1.6
+
+## What's Changed
+* Bump docker/login-action from 4.6.0 to 4.7.0 by @dependabot[bot] in https://github.com/solairen/docker_ansible/pull/114
+* Bump python from 3.14-slim to 3.15-slim by @dependabot[bot] in https://github.com/solairen/docker_ansible/pull/113
+
+
+**Full Changelog**: https://github.com/solairen/docker_ansible/compare/1.1.5...1.1.6
